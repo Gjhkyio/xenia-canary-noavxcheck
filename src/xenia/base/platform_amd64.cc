@@ -52,18 +52,18 @@ void InitFeatureFlags() {
     feature_flags_ |= (cpu_.has(ext) ? emit : 0);   \
   }
 
-    TEST_EMIT_FEATURE(kX64EmitAVX2, Xbyak::util::Cpu::tAVX2);
+    // TEST_EMIT_FEATURE(kX64EmitAVX2, Xbyak::util::Cpu::tAVX2);
     TEST_EMIT_FEATURE(kX64EmitFMA, Xbyak::util::Cpu::tFMA);
     TEST_EMIT_FEATURE(kX64EmitLZCNT, Xbyak::util::Cpu::tLZCNT);
     TEST_EMIT_FEATURE(kX64EmitBMI1, Xbyak::util::Cpu::tBMI1);
     TEST_EMIT_FEATURE(kX64EmitBMI2, Xbyak::util::Cpu::tBMI2);
     TEST_EMIT_FEATURE(kX64EmitMovbe, Xbyak::util::Cpu::tMOVBE);
     TEST_EMIT_FEATURE(kX64EmitGFNI, Xbyak::util::Cpu::tGFNI);
-    TEST_EMIT_FEATURE(kX64EmitAVX512F, Xbyak::util::Cpu::tAVX512F);
-    TEST_EMIT_FEATURE(kX64EmitAVX512VL, Xbyak::util::Cpu::tAVX512VL);
-    TEST_EMIT_FEATURE(kX64EmitAVX512BW, Xbyak::util::Cpu::tAVX512BW);
-    TEST_EMIT_FEATURE(kX64EmitAVX512DQ, Xbyak::util::Cpu::tAVX512DQ);
-    TEST_EMIT_FEATURE(kX64EmitAVX512VBMI, Xbyak::util::Cpu::tAVX512VBMI);
+    // TEST_EMIT_FEATURE(kX64EmitAVX512F, Xbyak::util::Cpu::tAVX512F);
+    // TEST_EMIT_FEATURE(kX64EmitAVX512VL, Xbyak::util::Cpu::tAVX512VL);
+    // TEST_EMIT_FEATURE(kX64EmitAVX512BW, Xbyak::util::Cpu::tAVX512BW);
+    //TEST_EMIT_FEATURE(kX64EmitAVX512DQ, Xbyak::util::Cpu::tAVX512DQ);
+    // TEST_EMIT_FEATURE(kX64EmitAVX512VBMI, Xbyak::util::Cpu::tAVX512VBMI);
     TEST_EMIT_FEATURE(kX64EmitPrefetchW, Xbyak::util::Cpu::tPREFETCHW);
 #undef TEST_EMIT_FEATURE
     /*
