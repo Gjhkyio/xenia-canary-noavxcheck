@@ -8,11 +8,7 @@ if(XE_TARGET_X86_64)
     X86_SSE2
     X86_SSSE3
     X86_SSE42
-    X86_AVX2
-    X86_AVX512
-    X86_AVX512VNNI
     X86_PCLMULQDQ_CRC
-    X86_VPCLMULQDQ_CRC
   )
 endif()
 target_link_libraries(xenia-kernel PUBLIC
