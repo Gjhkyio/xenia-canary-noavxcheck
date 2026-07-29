@@ -121,7 +121,7 @@ if(MSVC)
     /MP          # Multi-processor compilation
   )
   if(XE_TARGET_X86_64)
-    add_compile_options(/arch:AVX)
+    add_compile_options(/arch:SSE2)
   endif()
   add_compile_definitions(
     _CRT_NONSTDC_NO_DEPRECATE
@@ -182,7 +182,7 @@ if(MSVC)
 else()
   # GCC/Clang (Linux)
   if(XE_TARGET_X86_64)
-    add_compile_options(-mavx)
+    add_compile_options(-msse2)
   endif()
 
   # Disable specific warnings for C++
