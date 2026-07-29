@@ -219,10 +219,10 @@ bool X64Backend::Initialize(Processor* processor) {
   }
 
   Xbyak::util::Cpu cpu;
-  //if (!cpu.has(Xbyak::util::Cpu::tAVX)) {
+  // if (!cpu.has(Xbyak::util::Cpu::tAVX)) {
   //  XELOGE("This CPU does not support AVX. The emulator will now crash.");
   //  return false;
-  //}
+  // }
   return;
 
   // Need movbe to do advanced LOAD/STORE tricks.
