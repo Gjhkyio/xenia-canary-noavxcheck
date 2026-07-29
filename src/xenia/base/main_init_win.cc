@@ -25,14 +25,14 @@ class StartupCpuFeatureCheck {
     //      "Your CPU does not support AVX, which is required by Xenia. See "
     //      "the "
     //      "FAQ for system requirements at https://xenia.jp";
-    //}
+    // }
     if (error_message == nullptr) {
       return;
     } else {
       // TODO(gibbed): detect app type and printf instead, if needed?
       MessageBoxA(nullptr, error_message, "Xenia Error",
                   MB_OK | MB_ICONERROR | MB_SETFOREGROUND);
-      //ExitProcess(static_cast<uint32_t>(-1));
+      // ExitProcess(static_cast<uint32_t>(-1));
     }
   }
 };
