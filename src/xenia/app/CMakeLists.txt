@@ -36,12 +36,14 @@ else()
     ${PROJECT_SOURCE_DIR}/src/xenia/base/main_init_posix.cc
     ${PROJECT_SOURCE_DIR}/src/xenia/ui/windowed_app_main_posix.cc
   )
-  if(NOT MSVC AND XE_TARGET_X86_64)
-    set_source_files_properties(
-      ${PROJECT_SOURCE_DIR}/src/xenia/base/main_init_posix.cc
-      PROPERTIES COMPILE_OPTIONS "-msse2;-mno-avx"
-    )
-  endif()
+  if(XE_TARGET_X86_64)
+    add_compile_options(
+        -msse2
+        -mno-avx
+        -mno-avx2
+        -mno-avx512f
+  )
+endif()
 endif()
 
 target_compile_definitions(xenia-app PRIVATE
